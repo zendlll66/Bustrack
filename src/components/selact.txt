@@ -1,0 +1,58 @@
+import React, { useState } from 'react';
+
+const App = () => {
+  // สร้าง state เพื่อเก็บข้อมูลป้ายรถที่เลือกและข้อความที่จะแสดงใน <h1>
+  const [selectedSign, setSelectedSign] = useState(null);
+  const [headingText, setHeadingText] = useState('เลือกป้ายรถ');
+
+  // Function เมื่อเลือกป้ายรถ
+  const handleSignSelect = (sign) => {
+    setSelectedSign(sign);
+    setHeadingText(`ป้าย ${sign}`);
+  };
+
+  // Function เมื่อคลิกปุ่มไปหา
+  const handleGoToSign = () => {
+    // ตรวจสอบว่าเลือกป้ายรถแล้วหรือยัง
+    if (selectedSign) {
+      // ทำอะไรสักอย่างเมื่อกดปุ่มไปหา
+      // เช่น นำผู้ใช้ไปยังหน้าป้านที่เลือก
+      console.log('Go to sign:', selectedSign);
+    } else {
+      alert('กรุณาเลือกป้ายรถก่อน');
+    }
+  };
+
+  // ข้อมูลป้ายรถ
+  const signs = ['1', '2', '3', '4', '5', '6', '7'];
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen">
+      {/* แสดงหัวข้อ */}
+      <h1 className="text-3xl font-bold mb-8">{headingText}</h1>
+      {/* แสดงปุ่มเลือกป้ายรถ */}
+      <div className="space-y-4">
+        {signs.map((sign, index) => (
+          <button
+            key={index}
+            className={`px-4 py-2 border border-gray-300 rounded-md ${
+              selectedSign === sign ? 'bg-blue-500 text-white' : ''
+            }`}
+            onClick={() => handleSignSelect(sign)}
+          >
+            ป้าย {sign}
+          </button>
+        ))}
+      </div>
+      {/* ปุ่มไปหา */}
+      <button
+        className="mt-8 px-4 py-2 bg-green-500 text-white rounded-md"
+        onClick={handleGoToSign}
+      >
+        ไปหา
+      </button>
+    </div>
+  );
+};
+
+export default App;

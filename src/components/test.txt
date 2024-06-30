@@ -1,0 +1,31 @@
+// import React from "react";
+// import Card from "./components/Card";
+// import Trackpoint from "./components/Trackpoint";
+// import Mapsdetail from "./components/Mapsdetail";
+// import Btnr from "./components/Btnr";
+
+// const App = () => {
+//   return (
+//     <div className="border-4 border-orange-300 h-lvh ">
+//       <div className="border-2 border-red-400 relative sm:px-[1.5rem] sm:py-[1.5rem] md:px-[1.5rem] md:py-[1.5rem] lg:px-[5rem] lg:py-[2.5rem]">
+//         <div className="">
+//           <Btnr />
+//         </div>
+//         <div className="relative ">
+//           <Mapsdetail />
+//         </div>
+//       </div>
+//       <div
+//         className="sm:flex 
+//       sm:bottom-0 sm:scale-[100%] 
+//       md:pb-[5rem] md:pr-[1.5rem] md:right-0  
+//       lg:absolute lg:scale-[100%] lg:pb-[8rem] lg:right-0 lg:pr-[5rem]  w-full h-fit"
+//       >
+//         <Card />
+//       </div>
+//     </div>
+//   );
+// };
+// export default App;
+
+
